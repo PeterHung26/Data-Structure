@@ -1,0 +1,104 @@
+==114306== Memcheck, a memory error detector
+==114306== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==114306== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==114306== Command: ./pa5 riverSam.in2 output.out1 output.out2
+==114306== Parent PID: 110177
+==114306== 
+--114306-- 
+--114306-- Valgrind options:
+--114306--    --tool=memcheck
+--114306--    --log-file=vallog
+--114306--    --leak-check=full
+--114306--    --verbose
+--114306-- Contents of /proc/version:
+--114306--   Linux version 3.10.0-1160.88.1.el7.x86_64 (mockbuild@kbuilder.bsys.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ) #1 SMP Tue Mar 7 15:41:52 UTC 2023
+--114306-- 
+--114306-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--114306-- Page sizes: currently 4096, max supported 4096
+--114306-- Valgrind library directory: /usr/libexec/valgrind
+--114306-- Reading syms from /home/shay/a/hong395/Desktop/PA5/pa5
+--114306-- Reading syms from /usr/lib64/ld-2.17.so
+--114306--   Considering /usr/lib/debug/.build-id/62/c449974331341bb08dcce3859560a22af1e172.debug ..
+--114306--   .. build-id is valid
+--114306-- Reading syms from /usr/libexec/valgrind/memcheck-amd64-linux
+--114306--    object doesn't have a symbol table
+--114306--    object doesn't have a dynamic symbol table
+--114306-- Scheduler: using generic scheduler lock implementation.
+--114306-- Reading suppressions file: /usr/libexec/valgrind/default.supp
+==114306== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-114306-by-hong395-on-ececomp4.ecn.purdue.edu
+==114306== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-114306-by-hong395-on-ececomp4.ecn.purdue.edu
+==114306== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-114306-by-hong395-on-ececomp4.ecn.purdue.edu
+==114306== 
+==114306== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==114306== don't want to do, unless you know exactly what you're doing,
+==114306== or are doing some strange experiment):
+==114306==   /usr/libexec/valgrind/../../bin/vgdb --pid=114306 ...command...
+==114306== 
+==114306== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==114306==   /path/to/gdb ./pa5
+==114306== and then give GDB the following command
+==114306==   target remote | /usr/libexec/valgrind/../../bin/vgdb --pid=114306
+==114306== --pid is optional if only one valgrind process is running
+==114306== 
+--114306-- REDIR: 0x4019e40 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c7ed5 (???)
+--114306-- REDIR: 0x4019c10 (ld-linux-x86-64.so.2:index) redirected to 0x580c7eef (???)
+--114306-- Reading syms from /usr/libexec/valgrind/vgpreload_core-amd64-linux.so
+--114306-- Reading syms from /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so
+==114306== WARNING: new redirection conflicts with existing -- ignoring it
+--114306--     old: 0x04019e40 (strlen              ) R-> (0000.0) 0x580c7ed5 ???
+--114306--     new: 0x04019e40 (strlen              ) R-> (2007.0) 0x04c2d1b0 strlen
+--114306-- REDIR: 0x4019dc0 (ld-linux-x86-64.so.2:strcmp) redirected to 0x4c2e300 (strcmp)
+--114306-- REDIR: 0x401aa80 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4c31f90 (mempcpy)
+--114306-- Reading syms from /usr/lib64/libc-2.17.so
+--114306--   Considering /usr/lib/debug/.build-id/94/70e279388f7f9cb2ed3b2872d0c2095b191ff4.debug ..
+--114306--   .. build-id is valid
+--114306-- REDIR: 0x4ec71d0 (libc.so.6:strcasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--114306-- REDIR: 0x4ec3f40 (libc.so.6:strnlen) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--114306-- REDIR: 0x4ec94d0 (libc.so.6:strncasecmp) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--114306-- REDIR: 0x4ec69a0 (libc.so.6:memset) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--114306-- REDIR: 0x4ec6950 (libc.so.6:memcpy@GLIBC_2.2.5) redirected to 0x4a247a0 (_vgnU_ifunc_wrapper)
+--114306-- REDIR: 0x4ec5930 (libc.so.6:__GI_strrchr) redirected to 0x4c2cb70 (__GI_strrchr)
+--114306-- REDIR: 0x4ebc740 (libc.so.6:malloc) redirected to 0x4c29eec (malloc)
+--114306-- REDIR: 0x4edca10 (libc.so.6:__GI_strstr) redirected to 0x4c32220 (__strstr_sse2)
+--114306-- REDIR: 0x4ecbc30 (libc.so.6:__GI_memcpy) redirected to 0x4c2efb0 (__GI_memcpy)
+--114306-- REDIR: 0x4ebcb60 (libc.so.6:free) redirected to 0x4c2afe6 (free)
+==114306== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==114306== 
+==114306== Process terminating with default action of signal 11 (SIGSEGV)
+==114306==  Access not within mapped region at address 0x1FFE801FE8
+==114306== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==114306==    at 0x40119E: PRINT_PATH (loading.c:163)
+==114306==  If you believe this happened as a result of a stack
+==114306==  overflow in your program's main thread (unlikely but
+==114306==  possible), you can try to increase the size of the
+==114306==  main thread stack using the --main-stacksize= flag.
+==114306==  The main thread stack size used in this run was 8388608.
+==114306== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==114306== 
+==114306== Process terminating with default action of signal 11 (SIGSEGV)
+==114306==  Access not within mapped region at address 0x1FFE801FA8
+==114306== Stack overflow in thread #1: can't grow stack to 0x1ffe801000
+==114306==    at 0x4A24710: _vgnU_freeres (vg_preloaded.c:59)
+==114306==  If you believe this happened as a result of a stack
+==114306==  overflow in your program's main thread (unlikely but
+==114306==  possible), you can try to increase the size of the
+==114306==  main thread stack using the --main-stacksize= flag.
+==114306==  The main thread stack size used in this run was 8388608.
+==114306== 
+==114306== HEAP SUMMARY:
+==114306==     in use at exit: 216,928 bytes in 5 blocks
+==114306==   total heap usage: 6 allocs, 1 frees, 217,496 bytes allocated
+==114306== 
+==114306== Searching for pointers to 5 not-freed blocks
+==114306== Checked 5,127,440 bytes
+==114306== 
+==114306== LEAK SUMMARY:
+==114306==    definitely lost: 0 bytes in 0 blocks
+==114306==    indirectly lost: 0 bytes in 0 blocks
+==114306==      possibly lost: 0 bytes in 0 blocks
+==114306==    still reachable: 216,928 bytes in 5 blocks
+==114306==         suppressed: 0 bytes in 0 blocks
+==114306== Reachable blocks (those to which a pointer was found) are not shown.
+==114306== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==114306== 
+==114306== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
