@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "packing.h": "c",
+        "stdlib.h": "c",
+        "tuple": "c"
+    }
+}
